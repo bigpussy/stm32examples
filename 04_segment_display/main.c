@@ -11,11 +11,13 @@ void delay(int millis) {
 
 
 int main(void) {
-
     seg_init();
+    // seg_display(5);
     while(1) {
-        delay(DELAY);
-        // GPIO_ResetBits(LED1_PORT, LED1_GPIO_PIN); 
-        // GPIO_SetBits(SEGMENT_PORT, 0x03);
+        uint8_t number;
+        for(number=0xf;number>=0;number--){
+            delay(DELAY);
+            seg_display(number);
+        }
     }
 }

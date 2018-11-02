@@ -35,5 +35,7 @@ void seg_init();
  * Display a number
  * number: one number less than 0x10(0~F)
  * */
-void display(uint8_t number);
+void seg_display(uint8_t number);
+
+
 #endif
